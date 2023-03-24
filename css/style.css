@@ -10,3 +10,175 @@
     padding: 5px;
     
 }
+
+
+
+
+
+/* İNDEX-- */
+
+*{
+    padding: 0;
+    margin: 0;
+}
+.h1{
+    width: 100%;
+    height: 65px;
+    background: #F7F7F7;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border: 1px solid rgba(0, 0, 0, 0.126);
+}
+.h1 a{
+    font-size:medium;
+    color: black;
+}
+.button{
+    display: flex;
+    width: 100%;
+    height: 50px;
+    border-radius: 50px;
+    border: 0.1px solid rgba(0, 0, 0, 0.253);
+}
+.search{
+
+    width: 25px;
+    height: 25px;
+    margin: auto;
+    background:#FF385C;
+    border-radius: 50%;
+}
+.mid{
+    width: 78%;
+    border: 1px solid rgba(0, 0, 0, 0.232);
+    border-radius: 40px;
+    box-shadow: 2px 2px 9px 3px rgba(92, 89, 89, 0.319);
+}
+
+
+.home-demo .item {
+    background: #ffffff;
+    width: 30px;
+    height: 30px;
+}
+.home-demo h2 {
+    color: #000000;
+    text-align: center;
+    padding: 5rem 0;
+    margin: 0;
+    font-style: italic;
+    font-weight: 300;
+    
+}
+
+
+.owl-prev, .owl-next{
+    display: flex;
+    position: absolute;
+    transform: scale(3) !important;
+   
+}
+.owl-prev{
+    top: 20px;
+    left: 0;
+    height: 20px;
+    border-radius: 30px;
+    
+}
+.owl-next{
+    top: 20px;
+    right: 0;
+    height: 20px;
+    border-radius: 30px;
+}
+.owl-prev:hover,.owl-next:hover{
+    background: rgb(180, 172, 172) !important;
+    box-shadow: 2px 2px 9px 3px rgba(92, 89, 89, 0.319);
+}
+.carousel{
+    border-top: 1px solid rgba(0, 0, 0, 0.232);
+    margin-top: 30px;
+}
+.card-title{
+    font-size: small;
+    display: flex;
+    
+}
+.card .row h6{
+    color: #00000077;
+}
+
+
+/* İNDEX END --- */
+
+
+/* ------------------------------Detailss------------------------ */
+.leftandright-div{
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+.left-div{
+    width: 60%;
+    height: 100%;
+    background-color: white;
+}
+.right-div{
+    width: 40%;
+    height: 100%;
+    background-color: white;
+}
+
+.rom-img1{
+    width: 50%;
+    height: 100%;
+}
+.rom-img1 img{
+    width: 96%;
+    border-radius: 15px;
+}
+.rom-img2{
+    width: 50%;
+    height: 100%;
+}
+.rom-img2 img{
+    width: 96%;
+    border-radius: 15px;
+}
+.rom-img3{
+    width: 50%;
+    height: 100%;
+}
+.rom-img3 img{
+    width: 96%;
+    border-radius: 15px;
+}
+.rom-img4{
+    width: 50%;
+    height: 100%;
+}
+.rom-img4 img{
+    width: 96%;
+    border-radius: 15px;
+}
+.rom-img5{
+    width: 50%;
+    height: 100%;
+}
+.rom-img5 img{
+    width: 96%;
+    border-radius: 15px;
+}
+.rom-img6{
+    width: 50%;
+    height: 100%;
+}
+.rom-img6 img{
+    width: 96%;
+    border-radius: 15px;
+}
+.m-left{
+    width: 65% !important;
+}
+
