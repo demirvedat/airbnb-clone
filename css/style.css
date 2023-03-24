@@ -13,6 +13,7 @@
 
 
 
+
 /* İNDEX-- */
 *{
     padding: 0;
@@ -108,3 +109,74 @@
 
 
 /* İNDEX END --- */
+
+
+/* ------------------------------Detailss------------------------ */
+.leftandright-div{
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+.left-div{
+    width: 60%;
+    height: 100%;
+    background-color: white;
+}
+.right-div{
+    width: 40%;
+    height: 100%;
+    background-color: white;
+}
+
+.rom-img1{
+    width: 50%;
+    height: 100%;
+}
+.rom-img1 img{
+    width: 96%;
+    border-radius: 15px;
+}
+.rom-img2{
+    width: 50%;
+    height: 100%;
+}
+.rom-img2 img{
+    width: 96%;
+    border-radius: 15px;
+}
+.rom-img3{
+    width: 50%;
+    height: 100%;
+}
+.rom-img3 img{
+    width: 96%;
+    border-radius: 15px;
+}
+.rom-img4{
+    width: 50%;
+    height: 100%;
+}
+.rom-img4 img{
+    width: 96%;
+    border-radius: 15px;
+}
+.rom-img5{
+    width: 50%;
+    height: 100%;
+}
+.rom-img5 img{
+    width: 96%;
+    border-radius: 15px;
+}
+.rom-img6{
+    width: 50%;
+    height: 100%;
+}
+.rom-img6 img{
+    width: 96%;
+    border-radius: 15px;
+}
+.m-left{
+    width: 65% !important;
+}
+
