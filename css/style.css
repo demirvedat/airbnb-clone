@@ -398,12 +398,20 @@ tr {
 
   background-color: #F7F7F7;
 }
-.accordion-button:focus{
-  outline:none;
-}
 .accordion-item, accordion-header{
   background-color: #F7F7F7;
   padding: 1rem 0;
 }
-
-
+.accordion-button{
+  font-size: 1.3rem;
+  font-weight: 300;
+}
+.accordion-button:focus{
+  outline:none;
+}
+.accordion-body{
+  font-size: 1.1rem;
+}
+.accordion-body a{
+  color: black;
+}
