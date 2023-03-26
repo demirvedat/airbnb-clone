@@ -335,6 +335,7 @@ navbar div a {
   color: #a9a9a9;
   font-size: medium;
 }
+
 .table-container {
   margin-left: auto;
   margin-right: auto;
@@ -414,4 +415,45 @@ tr {
   padding: 1rem 0;
 }
 
+
+=======
+.m-left{
+    width: 65% !important;
+}
+
+.rezerve{
+    width: 80%;
+    height: 500px;
+    border-radius: 2px solid black;
+    border-radius: 20px;
+    margin-left: 55px;
+    box-shadow: -5px 10px 15px rgb(70, 69, 69);
+}
+.date{
+    border: 1px solid rgb(146, 142, 142);
+    margin-left: 50px;
+    height: 61px;
+    width: 300px !important;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.form-control{
+    border-left: none !important;
+}
+.cikis{
+    border-right: none !important;
+}
+
+.seyhatuzat{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 80%;
+    height: 100px;
+    margin-top: 30px;
+    margin-left: 55px;
+    border: 1px solid rgb(160, 153, 153);
+    border-radius: 20px;
+}
 
