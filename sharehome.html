@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yerinizi Airbnb'ye kaydedip ev sahipliği yapın</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <navbar class="navbar">
+        <div class="col-lg-4 col-md-4 col-2 mb-2 logo">
+          <a href="index.html">
+            <svg width="102" height="32">
+              <path
+                d="M29.3864 22.7101C29.2429 22.3073 29.0752 21.9176 28.9157 21.5565C28.6701 21.0011 28.4129 20.4446 28.1641 19.9067L28.1444 19.864C25.9255 15.0589 23.5439 10.1881 21.0659 5.38701L20.9607 5.18316C20.7079 4.69289 20.4466 4.18596 20.1784 3.68786C19.8604 3.0575 19.4745 2.4636 19.0276 1.91668C18.5245 1.31651 17.8956 0.833822 17.1853 0.502654C16.475 0.171486 15.7005 -9.83959e-05 14.9165 4.23317e-08C14.1325 9.84805e-05 13.3581 0.171877 12.6478 0.503224C11.9376 0.834571 11.3088 1.31742 10.8059 1.91771C10.3595 2.46476 9.97383 3.05853 9.65572 3.68858C9.38521 4.19115 9.12145 4.70278 8.8664 5.19757L8.76872 5.38696C6.29061 10.1884 3.90903 15.0592 1.69015 19.8639L1.65782 19.9338C1.41334 20.463 1.16057 21.0102 0.919073 21.5563C0.75949 21.9171 0.592009 22.3065 0.448355 22.7103C0.0369063 23.8104 -0.094204 24.9953 0.0668098 26.1585C0.237562 27.334 0.713008 28.4447 1.44606 29.3804C2.17911 30.3161 3.14434 31.0444 4.24614 31.4932C5.07835 31.8299 5.96818 32.002 6.86616 32C7.14824 31.9999 7.43008 31.9835 7.71027 31.9509C8.846 31.8062 9.94136 31.4366 10.9321 30.8639C12.2317 30.1338 13.5152 29.0638 14.9173 27.5348C16.3194 29.0638 17.6029 30.1338 18.9025 30.8639C19.8932 31.4367 20.9886 31.8062 22.1243 31.9509C22.4045 31.9835 22.6864 31.9999 22.9685 32C23.8664 32.002 24.7561 31.8299 25.5883 31.4932C26.6901 31.0444 27.6554 30.3161 28.3885 29.3804C29.1216 28.4447 29.5971 27.3341 29.7679 26.1585C29.9287 24.9952 29.7976 23.8103 29.3864 22.7101ZM14.9173 24.377C13.1816 22.1769 12.0678 20.1338 11.677 18.421C11.5169 17.7792 11.4791 17.1131 11.5656 16.4573C11.6339 15.9766 11.8105 15.5176 12.0821 15.1148C12.4163 14.6814 12.8458 14.3304 13.3374 14.0889C13.829 13.8475 14.3696 13.7219 14.9175 13.7219C15.4655 13.722 16.006 13.8476 16.4976 14.0892C16.9892 14.3307 17.4186 14.6817 17.7528 15.1151C18.0244 15.5181 18.201 15.9771 18.2693 16.4579C18.3556 17.114 18.3177 17.7803 18.1573 18.4223C17.7661 20.1349 16.6526 22.1774 14.9173 24.377ZM27.7406 25.8689C27.6212 26.6908 27.2887 27.4674 26.7762 28.1216C26.2636 28.7759 25.5887 29.2852 24.8183 29.599C24.0393 29.9111 23.1939 30.0217 22.3607 29.9205C21.4946 29.8089 20.6599 29.5239 19.9069 29.0824C18.7501 28.4325 17.5791 27.4348 16.2614 25.9712C18.3591 23.3846 19.669 21.0005 20.154 18.877C20.3723 17.984 20.4196 17.0579 20.2935 16.1475C20.1791 15.3632 19.8879 14.615 19.4419 13.9593C18.9194 13.2519 18.2378 12.6768 17.452 12.2805C16.6661 11.8842 15.798 11.6777 14.9175 11.6777C14.0371 11.6777 13.1689 11.8841 12.383 12.2803C11.5971 12.6765 10.9155 13.2515 10.393 13.9589C9.94707 14.6144 9.65591 15.3624 9.5414 16.1465C9.41524 17.0566 9.4623 17.9822 9.68011 18.8749C10.1648 20.9993 11.4748 23.384 13.5732 25.9714C12.2555 27.4348 11.0845 28.4325 9.92769 29.0825C9.17468 29.5239 8.34007 29.809 7.47395 29.9205C6.64065 30.0217 5.79525 29.9111 5.0162 29.599C4.24581 29.2852 3.57092 28.7759 3.05838 28.1217C2.54585 27.4674 2.21345 26.6908 2.09411 25.8689C1.97932 25.0334 2.07701 24.1825 2.37818 23.3946C2.49266 23.0728 2.62663 22.757 2.7926 22.3818C3.0274 21.851 3.27657 21.3115 3.51759 20.7898L3.54996 20.7197C5.75643 15.9419 8.12481 11.0982 10.5894 6.32294L10.6875 6.13283C10.9384 5.64601 11.1979 5.14267 11.4597 4.6563C11.7101 4.15501 12.0132 3.68171 12.3639 3.2444C12.6746 2.86903 13.0646 2.56681 13.5059 2.35934C13.9473 2.15186 14.4291 2.04426 14.9169 2.04422C15.4047 2.04418 15.8866 2.15171 16.3279 2.35911C16.7693 2.56651 17.1593 2.86867 17.4701 3.24399C17.821 3.68097 18.1242 4.15411 18.3744 4.65538C18.6338 5.13742 18.891 5.63623 19.1398 6.11858L19.2452 6.32315C21.7097 11.0979 24.078 15.9415 26.2847 20.7201L26.3046 20.7631C26.5498 21.2936 26.8033 21.8419 27.042 22.382C27.2082 22.7577 27.3424 23.0738 27.4566 23.3944C27.7576 24.1824 27.8553 25.0333 27.7406 25.8689Z"
+                fill="#FF385C"
+              ></path>
+            </svg>
+          </a>
+        </div>
+        <div class="col-lg-6 col-md-5 col-sm-4 d-flex align-items-center">
+          <button class="main-btn">Bir Süper Ev Sahibiyle sohbet edin</button>
+        </div>
+      </navbar>
+      <div class="row mt-5">
+        <main class="mt-5">
+          <div class="main-content d-flex mt-5">
+            <div class="col mx-2">
+              <div class="main-left">
+                <div class="left-content">
+                  <h1>
+                    <span class="pink-text">Evinizi Airbnb'ye taşıyın.</span
+                    ><br />
+                    Tahminî kazancınız<br />
+                  </h1>
+                  <div class="price"><h2>6.800 ₺</h2></div>
+                  <div>
+                    <p class="date">
+                      <a href="#">7 gece</a>(tahminî olarak gecelik 971 ₺
+                      üzerinden)
+                    </p>
+                  </div>
+                  <div class="slidecontainer">
+                    <input
+                      type="range"
+                      name="range1"
+                      min="1"
+                      max="30"
+                      value="1"
+                      class="slider"
+                      id="myRange"
+                    />
+                  </div>
+                  <div class="income mt-4">
+                    <a href="#" class="incomebtn"
+                      >Tahminî kazançlarınızı nasıl hesapladığımızı öğrenin</a
+                    >
+                  </div>
+                  <div class="d-flex justify-content-center mt-4">
+                    <div class="place align-items-center">
+                      <div class="search-icon">
+                        <svg
+                          viewBox="0 0 32 32"
+                          xmlns="http://www.w3.org/2000/svg"
+                          aria-hidden="true"
+                          role="presentation"
+                          focusable="false"
+                          style="
+                            display: block;
+                            fill: none;
+                            height: 16px;
+                            width: 16px;
+                            stroke: rgb(255, 56, 92);
+                            stroke-width: 4;
+                            overflow: visible;
+                          "
+                        >
+                          <g fill="none">
+                            <path
+                              d="m13 24c6.0751322 0 11-4.9248678 11-11 0-6.07513225-4.9248678-11-11-11-6.07513225 0-11 4.92486775-11 11 0 6.0751322 4.92486775 11 11 11zm8-3 9 9"
+                            ></path>
+                          </g>
+                        </svg>
+                      </div>
+                      <div class="px-3 d-flex flex-column">
+                        <h6 class="mb-0">Antalya</h6>
+                        <small class="small-text"
+                          >Yerin tamamı - 4 misafir</small
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mt-5 d-flex justify-content-center">
+                    <a href="#" class="pink-button">
+                      <span class="mx-1">
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M11.0639 7.63177V11.1393H7.51713V13.028H11.0639V16.5356H13.0048V13.028H16.5516V11.1393H13.0048V7.63177H11.0639Z"
+                            fill="white"
+                          ></path>
+                          <path
+                            d="M13.734 0.684168C13.2611 0.240904 12.6404 0 12 0C11.3596 0 10.7389 0.240904 10.266 0.674532L0 10.7251L1.36946 12.0549L2.10837 11.3321V19.9661C2.10837 20.4094 2.29557 20.8334 2.61084 21.1418C2.92611 21.4501 3.35961 21.6332 3.81281 21.6332H20.1773C20.6305 21.6332 21.064 21.4598 21.3892 21.1418C21.7143 20.8238 21.8916 20.3998 21.8916 19.9565V11.3032L22.6305 12.0259L24 10.7251L13.734 0.684168ZM4.03941 19.7542V9.4049L11.6355 1.97542C11.6847 1.92723 11.734 1.88869 11.803 1.86942C11.8621 1.84051 11.931 1.83087 12 1.83087H12.0099C12.0788 1.83087 12.1478 1.84051 12.2069 1.86942C12.266 1.89833 12.3251 1.92723 12.3744 1.97542L19.9704 9.4049V19.7542H4.03941Z"
+                            fill="white"
+                          ></path>
+                        </svg>
+                      </span>
+                      <span class="btn-text">Airbnb Start</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col mx-2">
+              <div class="main-right">
+                <div class="right-content">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3012.086751818831!2d28.872698315808616!3d40.979581179303864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cabd361d9f2bcd%3A0x109cda61c48e4b76!2sNeos%20Yaz%C4%B1l%C4%B1m%20Akademi!5e0!3m2!1str!2str!4v1679787074003!5m2!1str!2str"
+                    width="600"
+                    height="550"
+                    style="border: 0; border-radius: 30px"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+      <div class="row mt-5">
+        <h2 class="text-center mb-5 header-font-size">
+          Airbnb Start ile evinizi kolayca Airbnb'ye taşıyın
+        </h2>
+        <img
+          src="./css/img/share-home-img/img1.webp"
+          alt="evsahibi"
+          class="homeowner-img"
+        />
+      </div>
+      <div class="row mt-2 d-flex py-5">
+        <div class="col px-3 details">
+          <h4>Süper Ev Sahiplerinden bire bir rehberlik</h4>
+          <p>
+            Sizi bölgenizdeki bir Süper Ev Sahibi ile eşleştireceğiz. Bu kişi,
+            ilk sorunuzdan ilk misafirinize kadar telefonla, görüntülü arama
+            veya sohbet yoluyla size rehberlik edecek.
+          </p>
+        </div>
+        <div class="col px-3 details">
+          <h4>İlk rezervasyonunuz için deneyimli bir misafir</h4>
+          <p>
+            İlk rezervasyonunuz için Airbnb'de en az üç konaklaması ve iyi bir
+            geçmişi olan deneyimli bir misafiri ağırlamayı seçebilirsiniz.
+          </p>
+        </div>
+        <div class="col px-3 details">
+          <h4>Airbnb'den özel destek</h4>
+          <p>
+            Yeni ev sahipleri, hesapla ilgili sorunlardan faturalandırma
+            desteğine kadar her konuda size yardımcı olabilecek, özel olarak
+            eğitilmiş Topluluk Desteği temsilcilerine tek dokunuşla erişebilir.
+          </p>
+        </div>
+      </div>
+      <div class="row d-flex justify-content-center py-5">
+        <div class="mb-3">
+          <h4 class="text-center">Daha fazla bilgi edinmek ister misiniz?</h4>
+        </div>
+
+        <button class="main-btn w-25 font-weight-bold font-size-small">
+          Bir Süper Ev Sahibiyle sohbet edin
+        </button>
+      </div>
+      <div class="row mt-5">
+        <div class="d-flex justify-content-center">
+          <img
+            src="./css/img/share-home-img/img2.webp"
+            alt="aircover"
+            width="200px"
+            class="mb-4"
+          />
+        </div>
+        <h2 class="text-center mb-5 header-font-size">
+          Tepeden tırnağa koruma ile evinizi Airbnb'ye taşıyın
+        </h2>
+      </div>
+      <div class="row table-container my-2">
+        <table class="table">
+          <thead>
+            <tr>
+              <th class="p-4"></th>
+              <th class="p-4">Airbnb</th>
+              <th class="p-4">Rakipler</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-1">
+              <th>Misafirlerin kimliğini doğrulama</th>
+              <td>
+                <div class="d-flex justify-content-center">
+                  <svg
+                    viewBox="0 0 32 32"
+                    xmlns="http://www.w3.org/2000/svg"
+                    style="
+                      display: block;
+                      fill: none;
+                      height: 24px;
+                      width: 24px;
+                      stroke: #00a506;
+                      stroke-width: 5.333333333333333;
+                      overflow: visible;
+                    "
+                    aria-label="Airbnb'de dâhil olanlar"
+                    role="img"
+                    focusable="false"
+                  >
+                    <path fill="none" d="m4 16.5 8 8 16-16"></path>
+                  </svg>
+                </div>
+              </td>
+              <td>
+                <div class="d-flex justify-content-center">
+                  <svg
+                    viewBox="0 0 32 32"
+                    xmlns="http://www.w3.org/2000/svg"
+                    style="
+                      display: block;
+                      fill: none;
+                      height: 24px;
+                      width: 24px;
+                      stroke: #00a506;
+                      stroke-width: 5.333333333333333;
+                      overflow: visible;
+                    "
+                    aria-label="Rakiplerde dâhil olanlar"
+                    role="img"
+                    focusable="false"
+                  >
+                    <path fill="none" d="m4 16.5 8 8 16-16"></path>
+                  </svg>
+                </div>
+              </td>
+            </tr>
+            <tr class="light-font">
+              <td colspan="1" class="py-3">
+                Kapsamlı doğrulama sistemimiz, Airbnb'de rezervasyon yapan
+                misafirlerin kimliğini doğrulamak için ad, adres, resmî kimlik
+                vb. ayrıntıları kontrol eder.
+              </td>
+              <td aria-hidden="true" colspan="2"></td>
+            </tr>
+            <tr class="border-1">
+              <th>Rezervasyon taraması</th>
+              <td>
+                <div class="d-flex justify-content-center">
+                  <svg
+                    viewBox="0 0 32 32"
+                    xmlns="http://www.w3.org/2000/svg"
+                    style="
+                      display: block;
+                      fill: none;
+                      height: 24px;
+                      width: 24px;
+                      stroke: #00a506;
+                      stroke-width: 5.333333333333333;
+                      overflow: visible;
+                    "
+                    aria-label="Airbnb'de dâhil olanlar"
+                    role="img"
+                    focusable="false"
+                  >
+                    <path fill="none" d="m4 16.5 8 8 16-16"></path>
+                  </svg>
+                </div>
+              </td>
+              <td>
+                <div class="d-flex justify-content-center">
+                  <svg
+                    viewBox="0 0 32 32"
+                    xmlns="http://www.w3.org/2000/svg"
+                    style="
+                      display: block;
+                      fill: none;
+                      height: 24px;
+                      width: 24px;
+                      stroke: #e12c32;
+                      stroke-width: 5.333333333333333;
+                      overflow: visible;
+                    "
+                    aria-label="Rakiplerde dâhil olmayanlar"
+                    role="img"
+                    focusable="false"
+                  >
+                    <path d="m6 6 20 20"></path>
+                    <path d="m26 6-20 20"></path>
+                  </svg>
+                </div>
+              </td>
+            </tr>
+            <tr class="light-font">
+              <td colspan="1" class="py-3">
+                Rezervasyon taraması Tescilli teknolojimiz her rezervasyonda
+                yüzlerce faktörü analiz eder ve çevreye rahatsızlık veren
+                partiler ve mülk hasarı açısından yüksek riskli olarak görülen
+                belirli rezervasyonları engeller.
+              </td>
+              <td aria-hidden="true" colspan="2"></td>
+            </tr>
+            <tr class="border-1">
+              <th>3 Milyon USD değerinde hasar koruması</th>
+              <td>
+                <div class="d-flex justify-content-center">
+                  <svg
+                    viewBox="0 0 32 32"
+                    xmlns="http://www.w3.org/2000/svg"
+                    style="
+                      display: block;
+                      fill: none;
+                      height: 24px;
+                      width: 24px;
+                      stroke: #00a506;
+                      stroke-width: 5.333333333333333;
+                      overflow: visible;
+                    "
+                    aria-label="Airbnb'de dâhil olanlar"
+                    role="img"
+                    focusable="false"
+                  >
+                    <path fill="none" d="m4 16.5 8 8 16-16"></path>
+                  </svg>
+                </div>
+              </td>
+              <td>
+                <div class="d-flex justify-content-center">
+                  <svg
+                    viewBox="0 0 32 32"
+                    xmlns="http://www.w3.org/2000/svg"
+                    style="
+                      display: block;
+                      fill: none;
+                      height: 24px;
+                      width: 24px;
+                      stroke: #e12c32;
+                      stroke-width: 5.333333333333333;
+                      overflow: visible;
+                    "
+                    aria-label="Rakiplerde dâhil olmayanlar"
+                    role="img"
+                    focusable="false"
+                  >
+                    <path d="m6 6 20 20"></path>
+                    <path d="m26 6-20 20"></path>
+                  </svg>
+                </div>
+              </td>
+            </tr>
+            <tr class="light-font">
+              <td colspan="1" class="py-3">
+                Airbnb, misafirlerin evinize ve eşyalarınıza verdiği hasarı
+                tazmin eder ve şu özel korumaları sunar:
+              </td>
+              <td aria-hidden="true" colspan="2"></td>
+            </tr>
+            <tr class="border-2">
+              <th class="medium-font">Sanat eserleri ve değerli eşyalar</th>
+              <td class="padding-1">
+                <div class="d-flex justify-content-center">
+                  <svg
+                    viewBox="0 0 32 32"
+                    xmlns="http://www.w3.org/2000/svg"
+                    style="
+                      display: block;
+                      fill: none;
+                      height: 24px;
+                      width: 24px;
+                      stroke: #00a506;
+                      stroke-width: 5.333333333333333;
+                      overflow: visible;
+                    "
+                    aria-label="Airbnb'de dâhil olanlar"
+                    role="img"
+                    focusable="false"
+                  >
+                    <path fill="none" d="m4 16.5 8 8 16-16"></path>
+                  </svg>
+                </div>
+              </td>
+              <td class="padding-1">
+                <div class="d-flex justify-content-center">
+                  <svg
+                    viewBox="0 0 32 32"
+                    xmlns="http://www.w3.org/2000/svg"
+                    style="
+                      display: block;
+                      fill: none;
+                      height: 24px;
+                      width: 24px;
+                      stroke: #e12c32;
+                      stroke-width: 5.333333333333333;
+                      overflow: visible;
+                    "
+                    aria-label="Rakiplerde dâhil olmayanlar"
+                    role="img"
+                    focusable="false"
+                  >
+                    <path d="m6 6 20 20"></path>
+                    <path d="m26 6-20 20"></path>
+                  </svg>
+                </div>
+              </td>
+            </tr>
+            <tr class="border-2">
+              <th class="medium-font">Arabalar ve tekneler</th>
+              <td class="padding-1">
+                <div class="d-flex justify-content-center">
+                  <svg
+                    viewBox="0 0 32 32"
+                    xmlns="http://www.w3.org/2000/svg"
+                    style="
+                      display: block;
+                      fill: none;
+                      height: 24px;
+                      width: 24px;
+                      stroke: #00a506;
+                      stroke-width: 5.333333333333333;
+                      overflow: visible;
+                    "
+                    aria-label="Airbnb'de dâhil olanlar"
+                    role="img"
+                    focusable="false"
+                  >
+                    <path fill="none" d="m4 16.5 8 8 16-16"></path>
+                  </svg>
+                </div>
+              </td>
+              <td class="padding-1">
+                <div class="d-flex justify-content-center">
+                  <svg
+                    viewBox="0 0 32 32"
+                    xmlns="http://www.w3.org/2000/svg"
+                    style="
+                      display: block;
+                      fill: none;
+                      height: 24px;
+                      width: 24px;
+                      stroke: #e12c32;
+                      stroke-width: 5.333333333333333;
+                      overflow: visible;
+                    "
+                    aria-label="Rakiplerde dâhil olmayanlar"
+                    role="img"
+                    focusable="false"
+                  >
+                    <path d="m6 6 20 20"></path>
+                    <path d="m26 6-20 20"></path>
+                  </svg>
+                </div>
+              </td>
+            </tr>
+            <tr class="border-2">
+              <th class="medium-font">Evcil hayvan hasarı</th>
+              <td class="padding-1">
+                <div class="d-flex justify-content-center">
+                  <svg
+                    viewBox="0 0 32 32"
+                    xmlns="http://www.w3.org/2000/svg"
+                    style="
+                      display: block;
+                      fill: none;
+                      height: 24px;
+                      width: 24px;
+                      stroke: #00a506;
+                      stroke-width: 5.333333333333333;
+                      overflow: visible;
+                    "
+                    aria-label="Airbnb'de dâhil olanlar"
+                    role="img"
+                    focusable="false"
+                  >
+                    <path fill="none" d="m4 16.5 8 8 16-16"></path>
+                  </svg>
+                </div>
+              </td>
+              <td class="padding-1">
+                <div class="d-flex justify-content-center">
+                  <svg
+                    viewBox="0 0 32 32"
+                    xmlns="http://www.w3.org/2000/svg"
+                    style="
+                      display: block;
+                      fill: none;
+                      height: 24px;
+                      width: 24px;
+                      stroke: #e12c32;
+                      stroke-width: 5.333333333333333;
+                      overflow: visible;
+                    "
+                    aria-label="Rakiplerde dâhil olmayanlar"
+                    role="img"
+                    focusable="false"
+                  >
+                    <path d="m6 6 20 20"></path>
+                    <path d="m26 6-20 20"></path>
+                  </svg>
+                </div>
+              </td>
+            </tr>
+            <tr class="border-2">
+              <th class="medium-font">Gelir kaybı</th>
+              <td class="padding-1">
+                <div class="d-flex justify-content-center">
+                  <svg
+                    viewBox="0 0 32 32"
+                    xmlns="http://www.w3.org/2000/svg"
+                    style="
+                      display: block;
+                      fill: none;
+                      height: 24px;
+                      width: 24px;
+                      stroke: #00a506;
+                      stroke-width: 5.333333333333333;
+                      overflow: visible;
+                    "
+                    aria-label="Airbnb'de dâhil olanlar"
+                    role="img"
+                    focusable="false"
+                  >
+                    <path fill="none" d="m4 16.5 8 8 16-16"></path>
+                  </svg>
+                </div>
+              </td>
+              <td class="padding-1">
+                <div class="d-flex justify-content-center">
+                  <svg
+                    viewBox="0 0 32 32"
+                    xmlns="http://www.w3.org/2000/svg"
+                    style="
+                      display: block;
+                      fill: none;
+                      height: 24px;
+                      width: 24px;
+                      stroke: #e12c32;
+                      stroke-width: 5.333333333333333;
+                      overflow: visible;
+                    "
+                    aria-label="Rakiplerde dâhil olmayanlar"
+                    role="img"
+                    focusable="false"
+                  >
+                    <path d="m6 6 20 20"></path>
+                    <path d="m26 6-20 20"></path>
+                  </svg>
+                </div>
+              </td>
+            </tr>
+            <tr class="border-2">
+              <th class="medium-font">Derinlemesine temizlik</th>
+              <td class="padding-1">
+                <div class="d-flex justify-content-center">
+                  <svg
+                    viewBox="0 0 32 32"
+                    xmlns="http://www.w3.org/2000/svg"
+                    style="
+                      display: block;
+                      fill: none;
+                      height: 24px;
+                      width: 24px;
+                      stroke: #00a506;
+                      stroke-width: 5.333333333333333;
+                      overflow: visible;
+                    "
+                    aria-label="Airbnb'de dâhil olanlar"
+                    role="img"
+                    focusable="false"
+                  >
+                    <path fill="none" d="m4 16.5 8 8 16-16"></path>
+                  </svg>
+                </div>
+              </td>
+              <td class="padding-1">
+                <div class="d-flex justify-content-center">
+                  <svg
+                    viewBox="0 0 32 32"
+                    xmlns="http://www.w3.org/2000/svg"
+                    style="
+                      display: block;
+                      fill: none;
+                      height: 24px;
+                      width: 24px;
+                      stroke: #e12c32;
+                      stroke-width: 5.333333333333333;
+                      overflow: visible;
+                    "
+                    aria-label="Rakiplerde dâhil olmayanlar"
+                    role="img"
+                    focusable="false"
+                  >
+                    <path d="m6 6 20 20"></path>
+                    <path d="m26 6-20 20"></path>
+                  </svg>
+                </div>
+              </td>
+            </tr>
+            <tr class="border-1">
+              <th>1 milyon USD değerinde sorumluluk sigortası</th>
+              <td>
+                <div class="d-flex justify-content-center">
+                  <svg
+                    viewBox="0 0 32 32"
+                    xmlns="http://www.w3.org/2000/svg"
+                    style="
+                      display: block;
+                      fill: none;
+                      height: 24px;
+                      width: 24px;
+                      stroke: #00a506;
+                      stroke-width: 5.333333333333333;
+                      overflow: visible;
+                    "
+                    aria-label="Airbnb'de dâhil olanlar"
+                    role="img"
+                    focusable="false"
+                  >
+                    <path fill="none" d="m4 16.5 8 8 16-16"></path>
+                  </svg>
+                </div>
+              </td>
+              <td>
+                <div class="d-flex justify-content-center">
+                  <svg
+                    viewBox="0 0 32 32"
+                    xmlns="http://www.w3.org/2000/svg"
+                    style="
+                      display: block;
+                      fill: none;
+                      height: 24px;
+                      width: 24px;
+                      stroke: #00a506;
+                      stroke-width: 5.333333333333333;
+                      overflow: visible;
+                    "
+                    aria-label="Airbnb'de dâhil olanlar"
+                    role="img"
+                    focusable="false"
+                  >
+                    <path fill="none" d="m4 16.5 8 8 16-16"></path>
+                  </svg>
+                </div>
+              </td>
+            </tr>
+            <tr class="light-font">
+              <td colspan="1" class="py-3">
+                Bir misafirin yaralanması veya eşyalarının hasar görmesi ya da
+                çalınması gibi nadir görülen durumlara karşı korunursunuz.
+              </td>
+              <td aria-hidden="true" colspan="2"></td>
+            </tr>
+            <tr class="border-1">
+              <th>24 saat Güvenlik Destek Hattı</th>
+              <td>
+                <div class="d-flex justify-content-center">
+                  <svg
+                    viewBox="0 0 32 32"
+                    xmlns="http://www.w3.org/2000/svg"
+                    style="
+                      display: block;
+                      fill: none;
+                      height: 24px;
+                      width: 24px;
+                      stroke: #00a506;
+                      stroke-width: 5.333333333333333;
+                      overflow: visible;
+                    "
+                    aria-label="Airbnb'de dâhil olanlar"
+                    role="img"
+                    focusable="false"
+                  >
+                    <path fill="none" d="m4 16.5 8 8 16-16"></path>
+                  </svg>
+                </div>
+              </td>
+              <td>
+                <div class="d-flex justify-content-center">
+                  <svg
+                    viewBox="0 0 32 32"
+                    xmlns="http://www.w3.org/2000/svg"
+                    style="
+                      display: block;
+                      fill: none;
+                      height: 24px;
+                      width: 24px;
+                      stroke: #e12c32;
+                      stroke-width: 5.333333333333333;
+                      overflow: visible;
+                    "
+                    aria-label="Rakiplerde dâhil olmayanlar"
+                    role="img"
+                    focusable="false"
+                  >
+                    <path d="m6 6 20 20"></path>
+                    <path d="m26 6-20 20"></path>
+                  </svg>
+                </div>
+              </td>
+            </tr>
+            <tr class="light-font">
+              <td colspan="1" class="py-3">
+                Kendinizi güvende hissetmezseniz uygulamamız özel olarak
+                eğitilmiş güvenlik destek ekibine gece gündüz tek dokunuşla
+                erişmenizi sağlar.
+              </td>
+              <td aria-hidden="true" colspan="2"></td>
+            </tr>
+          </tbody>
+        </table>
+        <div>
+          <p class="light-font mb-4">
+            Karşılaştırma, 22 Ekim itibarıyla herkese açık bilgilere ve büyük
+            rakiplerin sunduğu ücretsiz tekliflere dayanır. Ayrıntıları ve
+            istisnaları
+            <a href="#" style="color: black">burada</a> bulabilirsiniz.
+          </p>
+        </div>
+        <div class="d-flex justify-content-center">
+          <button class="main-btn">Daha fazla bilgi edinin</button>
+        </div>
+      </div>
+    </div>
+    <div class="row bg-gray">
+      <div class="mt-5 px-5">
+        <div class="d-flex justify-content-center">
+          <div class="w-50 text-center">
+            <h2>
+              Sorularınız <br />
+              yanıtlandı
+            </h2>
+          </div>
+          <div class="w-50" >
+            <div class="accordion accordion-flush" id="accordionFlushExample"  >
+              <div class="accordion-item"  >
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseOne"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseOne"
+                  >
+                  Yerim Airbnb için uygun mu?
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseOne"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    Airbnb misafirleri her türlü yerle ilgilenir. Küçük evler, kulübeler, ağaç evler ve daha fazla türde kayıtlarımız var. Boş bir oda bile konaklamak için harika bir yer olabilir.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseTwo"
+                  >
+                  Her zaman ev sahipliği yapmak zorunda mıyım?
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseTwo"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    Kesinlikle değilsiniz. Takviminizi siz kontrol edersiniz. Yılda bir kez, ayda birkaç gece veya daha sık ev sahipliği yapabilirsiniz.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseThree"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseThree"
+                  >
+                
+                  Misafirlerle ne kadar etkileşim kurmalıyım?
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseThree"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+Bu size bağlıdır. Bazı ev sahipleri, misafirlere yalnızca önemli anlarda, örneğin giriş yaptıklarında mesaj göndermeyi tercih ederken bazıları da misafirleriyle yüz yüze görüşmekten keyif alır. Size ve misafirlerinize uyan bir tarz bulacağınıza eminiz.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseFour"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseFour"
+                  >
+                   Mükemmel bir Airbnb ev sahibi olmayla ilgili ipuçları var mı?
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseFour"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    Temel ilkeleri uygulayarak oldukça ilerleme kaydedersiniz. Yerinizi temiz tutun, misafirlere hızlıca yanıt verin ve temiz havlu gibi gerekli olanakları sağlayın. Bazı ev sahipleri taze çiçekler koymak veya keşfedilecek yerel yerlerin bir listesini paylaşmak gibi kişisel bir dokunuş eklemek ister ancak bu elbette zorunlu değildir.
+                    <a href="#">Ev sahipliğiyle ilgili daha fazla ipucu için okumaya devam edin</a> 
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseFive"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseFive"
+                  >
+                    Airbnb'nin ücretleri nedir?
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseFive"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    Airbnb, ödemenizi aldığınızda rezervasyon ara toplamının
+                    genellikle %3'ü oranında bir sabit hizmet bedeli tahsil
+                    eder. Ayrıca rezervasyon sırasında misafirlerden de bir
+                    ücret alırız. Airbnb, birçok bölgede otomatik olarak sizin
+                    adınıza satış ve turizm vergileri tahsil edip öder.
+                    <a href="#">Ücretler hakkında daha fazla bilgi edinin</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
