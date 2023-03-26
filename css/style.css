@@ -24,6 +24,13 @@
   padding: 0;
   margin: 0;
 }
+.owl-stage{
+  display: flex !important;
+  align-items: center !important;
+}
+.owl-carousel .item{
+  height:100px !important;
+}
 .h1 {
   width: 100%;
   height: 65px;
