@@ -1,8 +1,16 @@
 /* ================ Profil Header================= */
+
 .carry-bnb-pr {
   text-decoration: none;
   color: black;
   padding: 5px;
+
+
+.carry-bnb-pr{
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+
 }
 .carry-bnb-pr:hover {
   background-color: rgb(230, 230, 230);
