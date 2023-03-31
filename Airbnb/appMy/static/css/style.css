@@ -4,7 +4,7 @@
   text-decoration: none;
   color: black;
   padding: 5px;
-
+}
 
 .carry-bnb-pr{
     text-decoration: none;
@@ -23,6 +23,13 @@
 * {
   padding: 0;
   margin: 0;
+}
+.owl-stage{
+  display: flex !important;
+  align-items: center !important;
+}
+.owl-carousel .item{
+  height:100px !important;
 }
 .h1 {
   width: 100%;
@@ -177,7 +184,7 @@
 .m-left {
   width: 65% !important;
 }
-/* HOMES- MELODİ */
+
 .navbar {
   display: flex;
   align-items: center;
@@ -264,7 +271,6 @@ navbar div a {
 
 .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
-  /* appearance: black; */
   background-color: #222222;
   width: 25px;
   height: 25px;
@@ -407,16 +413,36 @@ tr {
 
   background-color: #F7F7F7;
 }
+
+
 .accordion-button:focus{
-  outline:none;
+  color: black;
+  border: none;
+  box-shadow: none;
 }
+
 .accordion-item, accordion-header{
   background-color: #F7F7F7;
   padding: 1rem 0;
 }
 
+.accordion-button{
+  font-size: 1.3rem;
+  font-weight: 300;
+}
+.accordion-button:focus{
+  box-shadow: none;
+  color: black;
+}
+.accordion-body{
+  font-size: 1.1rem;
+}
+.accordion-body a{
+  color: black;
+}
 
-=======
+
+
 .m-left{
     width: 65% !important;
 }
