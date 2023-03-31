@@ -6,11 +6,10 @@
   padding: 5px;
 }
 
-.carry-bnb-pr{
-    text-decoration: none;
-    color: black;
-    padding: 5px;
-
+.carry-bnb-pr {
+  text-decoration: none;
+  color: black;
+  padding: 5px;
 }
 .carry-bnb-pr:hover {
   background-color: rgb(230, 230, 230);
@@ -24,12 +23,12 @@
   padding: 0;
   margin: 0;
 }
-.owl-stage{
+.owl-stage {
   display: flex !important;
   align-items: center !important;
 }
-.owl-carousel .item{
-  height:100px !important;
+.owl-carousel .item {
+  height: 100px !important;
 }
 .h1 {
   width: 100%;
@@ -210,7 +209,7 @@ navbar div a {
   border: 1px solid black;
   background-color: #fff;
   cursor: pointer;
-  padding: 13px 23px;
+  padding: 10px 20px;
   transition: box-shadow 0.2s ease, transform 0.1s ease;
   border-radius: 8px;
 }
@@ -342,38 +341,11 @@ navbar div a {
   font-size: medium;
 }
 
-.table-container {
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 80px;
-}
-table {
-  /* border-collapse: collapse; */
-  width: 100%;
-  margin: 0 auto;
-  padding: 0;
-  border-bottom: 2px solid #ddd;
-}
-table thead tr th {
-  font-weight: 300;
-  font-size: x-large;
-}
-table tbody tr th {
+.big-font {
   padding-top: 2rem !important;
   font-size: 1.5rem;
   letter-spacing: 0.02rem;
   font-weight: 600;
-}
-table tbody tr td {
-  padding-top: 2rem !important;
-}
-tbody,
-td,
-tfoot,
-th,
-thead,
-tr {
-  border: none;
 }
 .header-font-size {
   font-size: 2.8rem;
@@ -391,95 +363,85 @@ tr {
   margin: 0 auto;
 }
 .medium-font {
-  padding: 1rem 0.2rem !important;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   letter-spacing: 0.02rem;
   font-weight: 300;
 }
-.medium-font td {
-  padding: 0 !important;
-}
-.padding-1 {
-  padding: 1rem 0 !important;
-}
-.bg-gray{
-  background-color: #F7F7F7;
+.bg-gray {
+  background-color: #f7f7f7;
 }
 .accordion {
   --bs-accordion-active-bg: #f7f7f7;
-  --bs-accordion-color:#9C9C9C;
-  --bs-accordion-bg:#f7f7f7;
- /* --bs-accordion-icon-active-color:black; */
+  --bs-accordion-color: #9c9c9c;
+  --bs-accordion-bg: #f7f7f7;
+  /* --bs-accordion-icon-active-color:black; */
 
-  background-color: #F7F7F7;
+  background-color: #f7f7f7;
 }
 
-
-.accordion-button:focus{
+.accordion-button:focus {
   color: black;
   border: none;
   box-shadow: none;
 }
 
-.accordion-item, accordion-header{
-  background-color: #F7F7F7;
+.accordion-item,
+accordion-header {
+  background-color: #f7f7f7;
   padding: 1rem 0;
 }
 
-.accordion-button{
+.accordion-button {
   font-size: 1.3rem;
   font-weight: 300;
 }
-.accordion-button:focus{
+.accordion-button:focus {
   box-shadow: none;
   color: black;
 }
-.accordion-body{
+.accordion-body {
   font-size: 1.1rem;
 }
-.accordion-body a{
+.accordion-body a {
   color: black;
 }
 
-
-
-.m-left{
-    width: 65% !important;
+.m-left {
+  width: 65% !important;
 }
 
-.rezerve{
-    width: 80%;
-    height: 500px;
-    border-radius: 2px solid black;
-    border-radius: 20px;
-    margin-left: 55px;
-    box-shadow: -5px 10px 15px rgb(70, 69, 69);
+.rezerve {
+  width: 80%;
+  height: 500px;
+  border-radius: 2px solid black;
+  border-radius: 20px;
+  margin-left: 55px;
+  box-shadow: -5px 10px 15px rgb(70, 69, 69);
 }
-.date{
-    border: 1px solid rgb(146, 142, 142);
-    margin-left: 50px;
-    height: 61px;
-    width: 300px !important;
-    border-radius: 20px;
-    overflow: hidden;
+.date {
+  border: 1px solid rgb(146, 142, 142);
+  margin-left: 50px;
+  height: 61px;
+  width: 300px !important;
+  border-radius: 20px;
+  overflow: hidden;
 }
-.form-control{
-    border-left: none !important;
+.form-control {
+  border-left: none !important;
 }
-.cikis{
-    border-right: none !important;
-}
-
-.seyhatuzat{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    width: 80%;
-    height: 100px;
-    margin-top: 30px;
-    margin-left: 55px;
-    border: 1px solid rgb(160, 153, 153);
-    border-radius: 20px;
+.cikis {
+  border-right: none !important;
 }
 
+.seyhatuzat {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  width: 80%;
+  height: 100px;
+  margin-top: 30px;
+  margin-left: 55px;
+  border: 1px solid rgb(160, 153, 153);
+  border-radius: 20px;
+}
