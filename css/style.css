@@ -3,6 +3,7 @@
 .carry-bnb-pr {
   text-decoration: none;
   color: black;
+<<<<<<< Updated upstream
   padding: 5px;
 }
 
@@ -10,6 +11,14 @@
   text-decoration: none;
   color: black;
   padding: 5px;
+=======
+  padding: 5px; }
+.carry-bnb-pr{
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+
+>>>>>>> Stashed changes
 }
 .carry-bnb-pr:hover {
   background-color: rgb(230, 230, 230);
@@ -377,6 +386,7 @@ navbar div a {
   /* --bs-accordion-icon-active-color:black; */
 
   background-color: #f7f7f7;
+<<<<<<< Updated upstream
 }
 
 .accordion-button:focus {
@@ -388,9 +398,30 @@ navbar div a {
 .accordion-item,
 accordion-header {
   background-color: #f7f7f7;
-  padding: 1rem 0;
+=======
 }
 
+.accordion-item, accordion-header{
+  background-color: #F7F7F7;
+>>>>>>> Stashed changes
+  padding: 1rem 0;
+}
+.accordion-button{
+  font-size: 1.3rem;
+  font-weight: 300;
+}
+.accordion-button:focus{
+  outline:none;
+}
+.accordion-body{
+  font-size: 1.1rem;
+}
+.accordion-body a{
+  color: black;
+}
+/* HOMES-END */
+
+<<<<<<< Updated upstream
 .accordion-button {
   font-size: 1.3rem;
   font-weight: 300;
@@ -404,6 +435,10 @@ accordion-header {
 }
 .accordion-body a {
   color: black;
+=======
+.m-left{
+    width: 65% !important;
+>>>>>>> Stashed changes
 }
 
 .m-left {
