@@ -15,7 +15,18 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from appMy.views import *
+from appUser.views import *
+from django.conf.urls.static import static
+from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-]
+    path('',Index, name='Index'),
+    path('detail/',Detail, name='Detail'),
+    path('profile/',Profile, name='Profile'),
+    path('sharehome',Sharehome, name='Sharehome'),
+    
+    # Userpart
+   
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
