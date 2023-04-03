@@ -23,10 +23,12 @@ from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',Index, name='Index'),
-    path('detail/',Detail, name='Detail'),
-    path('profile/',Profile, name='Profile'),
-    path('sharehome',Sharehome, name='Sharehome'),
+    path('detail/<id>/',Detail, name='Detail'),
+    path('profile/<str:pk>',Profile, name='Profile'),
+    path('sharehome/',Sharehome, name='Sharehome'),
     
     # Userpart
+    path('login/',loginUser,name='loginUser'),
+    path('register/',registerUser,name='registerUser'),
    
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
