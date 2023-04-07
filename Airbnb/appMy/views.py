@@ -34,8 +34,12 @@ def Homeadd(request):
         price=request.POST['price']
         date=request.POST['date']
         image=request.FILES['image']
+        image1=request.FILES['image1']
+        image2=request.FILES['image2']
+        image3=request.FILES['image3']
+        image4=request.FILES['image4']
         
-        house=House(name=housename, category=category, country=country, location=location, price=price, publish_date=date, image=image, owner=request.user)
+        house=House(name=housename, category=category, country=country, location=location, price=price, publish_date=date, image=image, image1=image1, image2=image2, image3=image3,image4=image4, owner=request.user)
         house.save() 
         return redirect('Index')
     context={
