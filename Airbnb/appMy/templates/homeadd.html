@@ -1,19 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Yerinizi Airbnb'ye kaydedip ev sahipliği yapın</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="../static/css/style.css" />
-  </head>
-  <body>
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block body %}
     <header class="container">
       <nav class="navbar">
         <div class="col-lg-4 col-md-4 col-2 mb-2 logo">
@@ -37,59 +26,58 @@
       <h1 class="text-center " style="color: #fa385c">
         Evinizi Airbnb'ye Ekleyin
       </h1>
-      <form action="./profile.html" class="py-2 medium-font">
+      
+      <form  method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
         <div class="row justify-content-center">
-          <div class="form-group col-md-6 col-lg-8 my-1">
+          <!-- <div class="form-group col-md-6 col-lg-8 my-1">
             <label class="pb-2" for="owner">Ev Sahibi </label>
             <input type="text" class="form-control" id="owner" />
-          </div>
+          </div> -->
 
           <div class="form-group col-md-6 col-lg-8 my-1">
             <label class="pb-2" for="houseName">Ev İsmi</label>
-            <input type="text" class="form-control" id="houseName" />
+            <input type="text" name="housename" class="form-control" id="houseName" />
           </div>
           <div class="form-group col-md-6 col-lg-8 my-1">
             <label class="pb-2" for="category">Kategori</label>
-            <select id="category" class="form-control light-font">
-              <option selected>Ev Kategorisi Seçiniz...</option>
-              <option>...</option>
+            <select id="category" class="form-control" name="category">
+              <option selected>Kategori seç</option>
+              {% for category in categories %}
+              <option value="{{ category.id }}">{{ category }}</option>
+                
+              {% endfor %}
+                
+              
             </select>
           </div>
 
 
           <div class="form-group col-md-6 col-lg-8 my-1">
             <label class="pb-2" for="inputCity">Ülke</label>
-            <input type="text" class="form-control" id="inputCity" />
+            <input type="text" name="country" class="form-control" id="inputCity" />
           </div>
           <div class="form-group col-md-6 col-lg-8 my-1">
             <label class="pb-2" for="inputState">Konum</label>
-            <input type="text" class="form-control" id="inputState" />
+            <input type="text" name="location" class="form-control" id="inputState" />
           </div>
           <div class="form-group col-md-6 col-lg-8 my-1">
             <label class="pb-2" for="price">Ücret</label>
-            <input type="text" class="form-control" id="price" />
+            <input type="text" name="price" class="form-control" id="price" />
           </div>
           <div class="form-group col-md-6 col-lg-8 my-1">
             <label class="pb-2" for="date">Tarih</label>
-            <input type="date" class="form-control" id="date" />
+            <input type="date" name="date" class="form-control" id="date" />
           </div>
 
           <div class="form-group col-md-6 col-lg-8 mt-1 mb-3">
             <label class="pb-2" for="inputAddress">Ev Resimlerini Ekleyiniz</label>
             <div class="custom-file">
-              <input
-                type="file"
-                class="custom-file-input light-font"
-                id="validatedCustomFile"
-                required
-              />
-              <div class="invalid-feedback">
-                Example invalid custom file feedback
-              </div>
+              <input type="file" name="image" id="inputAddress"/>
             </div>
           </div>
-          <button type="submit" class="btn btn-danger mt-3 col-lg-8" style="display: inline-block;">
-           Evi Kaydet
+          <button type="submit" name="addhome" class="btn btn-danger mt-3 col-lg-8" style="display: inline-block;">
+          Evi Kaydet
           </button>
         </div>
       </form>
@@ -101,7 +89,7 @@
         background-color: #f7f7f7;
         border-top: 1px solid #dddddd !important;
       "
-    >
+      >
       <div class="container">
         <div class="row justify-content-between">
           <div class="col-6 col-md-2 mb-3">
@@ -316,11 +304,7 @@
         </div>
       </div>
     </footer>
+  
+{% endblock body %}
+  
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-      crossorigin="anonymous"
-    ></script>
-  </body>
-</html>
