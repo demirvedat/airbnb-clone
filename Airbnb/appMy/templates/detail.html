@@ -485,36 +485,26 @@
 
                                 </div>
 
+                                
+                                {% for comm in comments %}
+                                
                                 <div class="comment my-5">
                                     <div class="comment-owner d-flex">
                                         <img style="width:50px; height:50px; border-radius:50%; margin-right: 10px; "
-                                            src="css/img/detail-img/profil.jpg" alt="">
+                                            src="{{ comm.commenter.userinfo.pr_image.url }}" alt="">
                                         <div class="c-owner">
-                                            <span class="fw-semibold fs-5">Prashant, Hindistan</span><br>
-                                            <span class="text-secondary">2018 yılında katıldı</span>
+                                            <span class="fw-semibold fs-5">{{ comm.commenter.userinfo.name }}, {{ comm.house.country }}</span><br>
+                                            <span class="text-secondary">{{ comm.commenter.userinfo.join_date }} yılında katıldı</span>
                                         </div>
                                     </div>
                                     <div class="comment-content">
-                                        <p>Konaklamak için harika bir yer. Her zaman ulaşılabilir, süper yardımsever ve her konuda bize kolayca yardım eden
-                                            Alex'e özel bir söz . Konaklamak için harika bir yer. Her zaman ulaşılabilir, süper yardımsever ve her konuda bize kolayca yardım eden
-                                            Alex'e özel bir söz</p>
+                                        <p>{{ comm.text }}</p>
                                     </div>
                                 </div>
-                                <div class="comment my-5">
-                                    <div class="comment-owner d-flex">
-                                        <img style="width:50px; height:50px; border-radius:50%; margin-right: 10px; "
-                                            src="css/img/detail-img/profil.jpg" alt="">
-                                        <div class="c-owner">
-                                            <span class="fw-semibold fs-5">Prashant, Hindistan</span><br>
-                                            <span class="text-secondary">2018 yılında katıldı</span>
-                                        </div>
-                                    </div>
-                                    <div class="comment-content">
-                                        <p>Konaklamak için harika bir yer. Her zaman ulaşılabilir, süper yardımsever ve her konuda bize kolayca yardım eden
-                                            Alex'e özel bir söz . Konaklamak için harika bir yer. Her zaman ulaşılabilir, süper yardımsever ve her konuda bize kolayca yardım eden
-                                            Alex'e özel bir söz</p>
-                                    </div>
-                                </div>
+                                {% endfor %}
+                                    
+
+                                
                             </div>
                             <!-- Right comment -->
                             <div class="right-comment w-50 my-5 ps-5">

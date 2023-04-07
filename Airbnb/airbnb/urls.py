@@ -26,6 +26,7 @@ urlpatterns = [
     path('detail/<id>/',Detail, name='Detail'),
     path('profile/<str:pk>',Profile, name='Profile'),
     path('sharehome/',Sharehome, name='Sharehome'),
+    path('homeadd/',Homeadd, name='Homeadd'),
     
     # Userpart
     path('login/',loginUser,name='loginUser'),

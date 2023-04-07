@@ -22,4 +22,9 @@ class House(models.Model):
     
     def __str__(self):
         return self.name
+
+class Comment(models.Model):
+    commenter=models.ForeignKey(User, verbose_name=("yorum yapan"), on_delete=models.CASCADE,null=True)
+    house=models.ForeignKey(House, verbose_name=("ev"), on_delete=models.CASCADE)
+    text=models.TextField(("yorum"),max_length = 150)
     
