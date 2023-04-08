@@ -14,7 +14,7 @@
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                <div ><a class="carry-bnb-pr" href="#">Evinizi Airbnb'ye taşıyın</a></div>
+                <div ><a class="carry-bnb-pr" href="{% url 'Sharehome' %}">Evinizi Airbnb'ye taşıyın</a></div>
                 <button class="bg-transparent border-0 mx-2"><svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" style="display: block; height: 20px; width: 20px; fill: currentcolor;"><path d="m8.002.25a7.77 7.77 0 0 1 7.748 7.776 7.75 7.75 0 0 1 -7.521 7.72l-.246.004a7.75 7.75 0 0 1 -7.73-7.513l-.003-.245a7.75 7.75 0 0 1 7.752-7.742zm1.949 8.5h-3.903c.155 2.897 1.176 5.343 1.886 5.493l.068.007c.68-.002 1.72-2.365 1.932-5.23zm4.255 0h-2.752c-.091 1.96-.53 3.783-1.188 5.076a6.257 6.257 0 0 0 3.905-4.829zm-9.661 0h-2.75a6.257 6.257 0 0 0 3.934 5.075c-.615-1.208-1.036-2.875-1.162-4.686l-.022-.39zm1.188-6.576-.115.046a6.257 6.257 0 0 0 -3.823 5.03h2.75c.085-1.83.471-3.54 1.059-4.81zm2.262-.424c-.702.002-1.784 2.512-1.947 5.5h3.904c-.156-2.903-1.178-5.343-1.892-5.494l-.065-.007zm2.28.432.023.05c.643 1.288 1.069 3.084 1.157 5.018h2.748a6.275 6.275 0 0 0 -3.929-5.068z"></path></svg></button>
                 <div class="dropdown rounded-5" style="border:1px solid black ;">
                     <button class="btn dropdown-toggleb rounded-5 d-flex align-items-center" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -183,7 +183,6 @@
                                         
                                       <div class="carousel-item active">
                                             <ul class="d-flex justify-content-around align-items-center list-unstyled">
-                                                  <li><a style="text-decoration:none; color:black;" href="#"><img style="max-height:300px;min-height:250px;" src="{{ house.image.url }}" class=" w-100 pe-2" alt="..."> <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" style="height:20px; width:20px;fill:currentColor" aria-hidden="true" role="presentation" focusable="false"><path d="M15.094 1.579l-4.124 8.885-9.86 1.27a1 1 0 0 0-.542 1.736l7.293 6.565-1.965 9.852a1 1 0 0 0 1.483 1.061L16 25.951l8.625 4.997a1 1 0 0 0 1.482-1.06l-1.965-9.853 7.293-6.565a1 1 0 0 0-.541-1.735l-9.86-1.271-4.127-8.885a1 1 0 0 0-1.814 0z" fill-rule="evenodd"></path></svg> 4,92(106) <br> Tüm ev/{{ house.name }}<br>{{ house.owner }} EV 4 dakika yürüme mesafesi..</a></li>
     
                                                   <li><a style="text-decoration:none; color:black;" href="#"><img style="max-height:300px;min-height:250px;" src="{{ house.image.url }}" class=" w-100" alt="..."><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" style="height:20px; width:20px;fill:currentColor" aria-hidden="true" role="presentation" focusable="false"><path d="M15.094 1.579l-4.124 8.885-9.86 1.27a1 1 0 0 0-.542 1.736l7.293 6.565-1.965 9.852a1 1 0 0 0 1.483 1.061L16 25.951l8.625 4.997a1 1 0 0 0 1.482-1.06l-1.965-9.853 7.293-6.565a1 1 0 0 0-.541-1.735l-9.86-1.271-4.127-8.885a1 1 0 0 0-1.814 0z" fill-rule="evenodd"></path></svg> 4,92(106) <br> Tüm ev/{{ house.name }} <br>{{ user }} RETRO BALIAN ağaç Evi</a></li>
                                             </ul>
@@ -197,14 +196,6 @@
                                    
                                      {% endfor %}
                                         
-                                      <!-- <div class="carousel-item">
-                                        <ul class="d-flex justify-content-around align-items-center list-unstyled">
-                                            <li><a style="text-decoration:none; color:black;" href="#"><img style="max-height:300px;" src="css/img/profile-page-image/caro3.jpg" class=" w-100 pe-2" alt="..."> <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" style="height:20px; width:20px;fill:currentColor" aria-hidden="true" role="presentation" focusable="false"><path d="M15.094 1.579l-4.124 8.885-9.86 1.27a1 1 0 0 0-.542 1.736l7.293 6.565-1.965 9.852a1 1 0 0 0 1.483 1.061L16 25.951l8.625 4.997a1 1 0 0 0 1.482-1.06l-1.965-9.853 7.293-6.565a1 1 0 0 0-.541-1.735l-9.86-1.271-4.127-8.885a1 1 0 0 0-1.814 0z" fill-rule="evenodd"></path></svg> 4,92(106) <br> Tüm ev/daire-Cabin<br>ŞIK AĞAÇ EV 4 dakika yürüme mesafesi..</a></li>
-
-                                            <li><a style="text-decoration:none; color:black;" href="#"><img style="max-height:300px;" src="css/img/profile-page-image/caro4.jpg" class=" w-100" alt="..."><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" style="height:20px; width:20px;fill:currentColor" aria-hidden="true" role="presentation" focusable="false"><path d="M15.094 1.579l-4.124 8.885-9.86 1.27a1 1 0 0 0-.542 1.736l7.293 6.565-1.965 9.852a1 1 0 0 0 1.483 1.061L16 25.951l8.625 4.997a1 1 0 0 0 1.482-1.06l-1.965-9.853 7.293-6.565a1 1 0 0 0-.541-1.735l-9.86-1.271-4.127-8.885a1 1 0 0 0-1.814 0z" fill-rule="evenodd"></path></svg> 4,92(106) <br> Tüm ev/daire-Cottage <br>Özel havuzlu RETRO BALIAN ağaç Evi</a></li>
-                                        </ul>
-                                      </div> -->
-                                    
                                     </div>
                                     <button class="carousel-control-prev justify-content-start" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
                                       <span style="margin-top:-40px;" class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -221,16 +212,16 @@
                                 <div><span class="fs-5 fw-medium">{{ user.userinfo.name }} adlı kişinin rehberi</span></div><br>
                                 <div class="img-div position-relative">
                                     <a href="#">
-                                    <img style="width:200px; height:250px; border-radius:10px ;" src="css/img/profile-page-image/9eb60942-7164-4d9e-bc6c-a8dcb58299f5.webp" alt="">
+                                    <img style="width:200px; height:250px; border-radius:10px ;" src="{{ user.userinfo.pr_image.url }}" alt="">
 
                                     <div class="opa-div opacity-50" style="background-color:black; position:absolute;width:200px; height:250px; border-radius:10px; top:0%;">
                                     </div>
                                     <div class="text-owner-box fs-6" style="position:absolute; top:60%;width:200px; height:50px; border-radius:10px; color:white;">
                                         <div class="text text-center px-1">
-                                            <p>BodroomBnB’s guidebook - Downtown Dubai</p>
+                                            <p>{{ user.userinfo.name }}’s guidebook - Downtown Dubai</p>
                                         </div>
                                         <div class="owner d-flex px-3">
-                                            <img style="width:30px; height:30px; border-radius:50% ;" src="css/img/profile-page-image/user-profil.jpg" alt="">
+                                            <img style="width:30px; height:30px; border-radius:50% ;" src="{{ user.userinfo.pr_image.url }}" alt="">
                                             <div class="name-owner ms-2">{{ user.userinfo.name }}</div>
                                         </div>
                                     </div>
@@ -242,30 +233,40 @@
                                 <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" style="display:block;height:20px; width:20px;fill:currentColor" aria-hidden="true" role="presentation" focusable="false"><path d="M15.094 1.579l-4.124 8.885-9.86 1.27a1 1 0 0 0-.542 1.736l7.293 6.565-1.965 9.852a1 1 0 0 0 1.483 1.061L16 25.951l8.625 4.997a1 1 0 0 0 1.482-1.06l-1.965-9.853 7.293-6.565a1 1 0 0 0-.541-1.735l-9.86-1.271-4.127-8.885a1 1 0 0 0-1.814 0z" fill-rule="evenodd"></path></svg><span class="fw-medium fs-4 ms-2"> 367 değerlendirme</span>
                                 <br><br><br>
                             </div>
+                            
+                            {% for comm in comments %}
+                            
+                            {% if comm.house.owner == user %}
+                              
                             <div class="comment">
                                 <div class="place-owner d-flex justify-content-between">
                                     <div class="p-owner-name">
-                                        <span class="fw-medium fs-5">Silverene Tower A, Dubai Marina - Benzersiz İki Yatak</span> <br>
-                                        <span>Mart 2023</span>
+                                        <span class="fw-medium fs-5">{{ comm.house.name }}, {{ user.userinfo.name }} </span> <br>
+                                        <span>{{ comm.house.publish_date }}</span>
                                     </div>
                                     <div class="p-img mb-3">
-                                        <img style="width:80px; height:60px; border-radius:10px;" src="css/img/profile-page-image/9eb60942-7164-4d9e-bc6c-a8dcb58299f5.webp" alt="">
+                                        <img style="width:80px; height:60px; border-radius:10px;" src="{{ comm.house.image.url }}" alt="">
                                     </div>
                                 </div>
                                 <div class="comment-content">
-                                    <p>Konaklamak için harika bir yer. Her zaman ulaşılabilir, süper yardımsever ve her konuda bize kolayca yardım eden Alex'e özel bir söz.</p>
+                                    <p>{{ comm.text }}</p>
                                 </div>
                                 <div class="comment-owner d-flex">
-                                    <img style="width:50px; height:50px; border-radius:50%; margin-right: 10px; " src="css/img/profile-page-image/d60a81e4-6f3c-4f41-873d-b53bf806ed92.webp" alt="">
+                                    <img style="width:50px; height:50px; border-radius:50%; margin-right: 10px; " src="{{ comm.commenter.userinfo.pr_image.url }}" alt="">
                                     <div class="c-owner">
-                                        <span class="fw-semibold fs-5">Prashant, Hindistan</span><br>
-                                        <span class="text-secondary">2018 yılında katıldı</span>
+                                        <span class="fw-semibold fs-5">{{ comm.commenter.userinfo.name }}</span><br>
+                                        <span class="text-secondary">{{ comm.commenter.userinfo.join_date }} yılında katıldı</span>
                                     </div>
-                                </div>
+                                </div><hr>
                             </div>
+                            {% endif %}
+                              
+                            
+                            {% endfor %}
+                              
                     </div>
                 </div>
-                <!-- for responsive ----->
+                <!--===================================== for responsive =========================----->
                 <div class="col-12 d-xl-none">
                     <div class="pr-info w-100" style="padding:20px;">
                         <div class="pr-image d-flex justify-content-between align-items-center w-100">

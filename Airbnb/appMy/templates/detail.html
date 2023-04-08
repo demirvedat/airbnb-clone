@@ -29,7 +29,7 @@
                             </span>
                         </button>
                     </form>
-                    <a href="#" class="ms-5"
+                    <a href="{% url 'Sharehome' %}" class="ms-5"
                         style="text-decoration: none; color: black; margin-left:100px !important;">Evinizi Airbnb'ye
                         tasiyin</a>
                     <span class="material-symbols-outlined  ms-5" style="margin-left:-65px !important;">
@@ -82,12 +82,26 @@
                         <div class="right-photo " style=" width: 50%">
                             
                                 <div class="right-photo-1 d-flex justify-content-between mt-0 p-0 m-0">
-                                    <img src="css/img/detail-img/2.jpg" alt="" class="my-2" style="width: 45%; height: 220px !important; ">
-                                    <img src="css/img/detail-img/3.jpg" alt="" class="my-2" style="width: 50%; height: 220px ; border-top-right-radius: 20px; border-bottom-right-radius: 20px; ">
+                                    
+                                    {% if house.image1 %}
+                                    <img src="{{ house.image1.url }}" alt="" class="my-2" style="width: 45%; height: 220px !important; ">
+                                    
+                                    {% endif %}
+                                    {% if house.image2 %}
+                                    <img src="{{ house.image2.url }}" alt="" class="my-2" style="width: 50%; height: 220px ; border-top-right-radius: 20px; border-bottom-right-radius: 20px; ">
+                                    
+                                    {% endif %}
+                                        
                                 </div>
                                 <div class="right-photo-2 d-flex justify-content-between" >
-                                    <img src="css/img/detail-img/4.jpg" alt="" class="my-2" style="width: 45%; height: 220px !important;">
-                                    <img src="css/img/detail-img/5.jpg" alt="" class="my-2" style="width: 50%; height: 220px; border-top-right-radius: 20px; border-bottom-right-radius: 20px; ">
+                                    {% if house.image3 %}
+                                    <img src="{{ house.image3.url }}" alt="" class="my-2" style="width: 45%; height: 220px !important;">
+                                    
+                                    {% endif %}
+                                    {% if house.image4 %}
+                                    
+                                    <img src="{{ house.image4.url }}" alt="" class="my-2" style="width: 50%; height: 220px; border-top-right-radius: 20px; border-bottom-right-radius: 20px; ">
+                                    {% endif %}
 
                                 </div>
                             </div>
@@ -485,108 +499,29 @@
 
                                 </div>
 
-                                <div class="comment my-5">
-                                    <div class="comment-owner d-flex">
-                                        <img style="width:50px; height:50px; border-radius:50%; margin-right: 10px; "
-                                            src="css/img/detail-img/profil.jpg" alt="">
-                                        <div class="c-owner">
-                                            <span class="fw-semibold fs-5">Prashant, Hindistan</span><br>
-                                            <span class="text-secondary">2018 yılında katıldı</span>
-                                        </div>
-                                    </div>
-                                    <div class="comment-content">
-                                        <p>Konaklamak için harika bir yer. Her zaman ulaşılabilir, süper yardımsever ve her konuda bize kolayca yardım eden
-                                            Alex'e özel bir söz . Konaklamak için harika bir yer. Her zaman ulaşılabilir, süper yardımsever ve her konuda bize kolayca yardım eden
-                                            Alex'e özel bir söz</p>
-                                    </div>
-                                </div>
-                                <div class="comment my-5">
-                                    <div class="comment-owner d-flex">
-                                        <img style="width:50px; height:50px; border-radius:50%; margin-right: 10px; "
-                                            src="css/img/detail-img/profil.jpg" alt="">
-                                        <div class="c-owner">
-                                            <span class="fw-semibold fs-5">Prashant, Hindistan</span><br>
-                                            <span class="text-secondary">2018 yılında katıldı</span>
-                                        </div>
-                                    </div>
-                                    <div class="comment-content">
-                                        <p>Konaklamak için harika bir yer. Her zaman ulaşılabilir, süper yardımsever ve her konuda bize kolayca yardım eden
-                                            Alex'e özel bir söz . Konaklamak için harika bir yer. Her zaman ulaşılabilir, süper yardımsever ve her konuda bize kolayca yardım eden
-                                            Alex'e özel bir söz</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Right comment -->
-                            <div class="right-comment w-50 my-5 ps-5">
-                                <div class="hizmet-degerlendirme d-flex">
-                                    <div class="hizmet" style="width: 50%;">
-                                        <ul class="my-3">
-                                            <li style="list-style: none;">Doğruluk</li>
-                                            <li class="my-2" style="list-style: none;">Konum</li>
-                                            <li style="list-style: none;">Kalite/fiyat oranı</li>
-                                        </ul>
-                                    </div>
-                                    <div class="degerlendirme" style="width: 50%; ">
-                                        <div class="dgerlendirme1 d-flex align-items-center">
-                                            <div class="progress w-75 " style="height: 10px;">
-                                                <div class="progress-bar w-50" role="progressbar" aria-label="Basic example" aria-valuenow="75"
-                                                    aria-valuemin="0" aria-valuemax="75"></div>
-                                            </div>
-                                            <p class=" mx-2">4,4</p>
-                                        </div>
-                                        <div class="dgerlendirme2 d-flex align-items-center">
-                                            <div class="progress w-75 " style="height: 10px;">
-                                                <div class="progress-bar w-100" role="progressbar" aria-label="Basic example" aria-valuenow="75"
-                                                    aria-valuemin="0" aria-valuemax="75"></div>
-                                            </div>
-                                            <p class="mx-2">4,9</p>
-                                        </div>
-                                        <div class="dgerlendirme3 d-flex align-items-center">
-                                            <div class="progress w-75 " style="height: 10px;">
-                                                <div class="progress-bar w-75" role="progressbar" aria-label="Basic example" aria-valuenow="75"
-                                                    aria-valuemin="0" aria-valuemax="75"></div>
-                                            </div>
-                                            <p class="mx-2">4,7</p>
-                                        </div>
-                                    </div>
                                 
-                                </div>
+                                {% for comm in comments %}
                                 
                                 <div class="comment my-5">
                                     <div class="comment-owner d-flex">
                                         <img style="width:50px; height:50px; border-radius:50%; margin-right: 10px; "
-                                            src="css/img/detail-img/profil.jpg" alt="">
+                                            src="{{ comm.commenter.userinfo.pr_image.url }}" alt="">
                                         <div class="c-owner">
-                                            <span class="fw-semibold fs-5">Prashant, Hindistan</span><br>
-                                            <span class="text-secondary">2018 yılında katıldı</span>
+                                            <span class="fw-semibold fs-5">{{ comm.commenter.userinfo.name }}, {{ comm.house.country }}</span><br>
+                                            <span class="text-secondary">{{ comm.commenter.userinfo.join_date }} yılında katıldı</span>
                                         </div>
                                     </div>
                                     <div class="comment-content">
-                                        <p>Konaklamak için harika bir yer. Her zaman ulaşılabilir, süper yardımsever ve her konuda bize kolayca yardım
-                                            eden
-                                            Alex'e özel bir söz . Konaklamak için harika bir yer. Her zaman ulaşılabilir, süper yardımsever ve her
-                                            konuda bize kolayca yardım eden
-                                            Alex'e özel bir söz</p>
+                                        <p>{{ comm.text }}</p>
                                     </div>
                                 </div>
-                                <div class="comment my-5">
-                                    <div class="comment-owner d-flex">
-                                        <img style="width:50px; height:50px; border-radius:50%; margin-right: 10px; "
-                                            src="css/img/detail-img/profil.jpg" alt="">
-                                        <div class="c-owner">
-                                            <span class="fw-semibold fs-5">Prashant, Hindistan</span><br>
-                                            <span class="text-secondary">2018 yılında katıldı</span>
-                                        </div>
-                                    </div>
-                                    <div class="comment-content">
-                                        <p>Konaklamak için harika bir yer. Her zaman ulaşılabilir, süper yardımsever ve her konuda bize kolayca yardım
-                                            eden
-                                            Alex'e özel bir söz . Konaklamak için harika bir yer. Her zaman ulaşılabilir, süper yardımsever ve her
-                                            konuda bize kolayca yardım eden
-                                            Alex'e özel bir söz</p>
-                                    </div>
-                                </div>
+                                {% endfor %}
+                                    
+
+                                
                             </div>
+                            
+                            
 
                         </div>
                         <hr>
