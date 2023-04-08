@@ -6,6 +6,7 @@ from appUser.models import *
 
 class Category(models.Model):
     name=models.CharField(("kategori ismi"), max_length=50)
+    c_image=models.FileField(("kategori iconu"), upload_to=None, max_length=100, null=True)
     def __str__(self):
         return self.name
     
