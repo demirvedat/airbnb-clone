@@ -112,8 +112,11 @@
 .card .row h6 {
   color: #00000077;
 }
-.carousel-control-prev:hover{
-  background-color: red !important;
+.carousel-control-prev-icon:hover{
+  background-color: rgb(231, 89, 89) !important;
+}
+.carousel-control-next-icon:hover{
+  background-color: rgb(231, 89, 89) !important;
 }
 
 /* İNDEX END --- */

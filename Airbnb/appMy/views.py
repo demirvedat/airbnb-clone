@@ -2,10 +2,13 @@ from django.shortcuts import render,redirect,get_object_or_404
 from .models import *
 from appUser.models import *
 # Create your views here.
-def Index(request):
-    houses=House.objects.all()
-    
+def Index(request,id='all'):
+    houses=House.objects.all().order_by("-id")
+    categories=Category.objects.all()
+    if id.isnumeric():
+        houses=House.objects.filter(category=id)
     context={
+        'categories':categories,
         'houses':houses,
     }
     return render(request,'index.html',context)

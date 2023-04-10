@@ -22,7 +22,7 @@ from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',Index, name='Index'),
+    path('home/<id>/',Index, name='Index'),
     path('detail/<id>/',Detail, name='Detail'),
     path('profile/<str:pk>',Profile, name='Profile'),
     path('sharehome/',Sharehome, name='Sharehome'),
